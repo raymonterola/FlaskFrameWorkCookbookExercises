@@ -1,0 +1,12 @@
+{% macro render_field(name, title, class='', value='', type='text') -%}
+  <input type="{{type}}" name="{{ name }}" title="{{title}}" placeholder="{{title}}"
+         {% if class %}class="{{ class }}"{% endif %}
+         {% if value %}value="{{ value }}"{% endif %} >
+{%- endmacro %}
+{% macro render_select(name, options) -%}
+  <select name="{{name}}" required="required" title="{{name}}">
+    {% for value, text in options.items() %}
+      <option value="{{value}}">{{text}}</option>
+    {% endfor %}
+  </select>
+{%- endmacro %}

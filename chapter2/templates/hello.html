@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  {% include 'header.html' %}
+</head>
+<body>
+<div class="container p-4">
+  <div class="card" style="width: 18rem;">
+    <img src="{{url_for('static', filename='images.jpeg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Greetings!</h5>
+      <p class="card-text">Hello {{ user }}! It is good to see you here.</p>
+      <a href="#" class="btn btn-primary">We've been expecting you.</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
